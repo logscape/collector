@@ -6,6 +6,8 @@ The Logscape Cloud services accepts data from different sources. Any client that
 
  ![](/docs/images/overview.png) 
 
+There are other ways of getting data into Logscape Cloud. The first is via [syslog](docs/syslog.md) and by [sending raw socket data](docs/rawtcp.md) 
+
 ## Downloads
 
  * [Windows Collector](installers/windows/setup.exe) 
