@@ -20,9 +20,7 @@ You will be asked to verify your email. Once you have logged to your user accoun
 
 ## Installation
 
-### Windows 
-
-Download and run setup.exe and unpack the Collector. 
+Download and run setup.exe and unpack the Collector. When the setup.exe is finished it will install the Logscape Cloud Collector as a service. Open up task ma
 
 
 
@@ -47,3 +45,55 @@ To start the Logscape Collector  in standalone mode execute ./start.sh or ./star
 
 
 
+## Updating Your Config 
+
+There are two ways of updating your configuration. Using the first method, edit your services.json, then restart the agent. The second method uses the command client to send instructions to the Logscape Collector. Here are a few example commands 
+
+*** Display Current Config **
+
+	./command config 
+
+*** Update the security token *** 
+
+	./command config write token="123:456:678" manager="saas.logscape.com" 
+
+
+*** Display the config for an app  ***
+
+	./command config unixapp 
+
+*** Update a value ***
+
+	./command config myapp tag=uat
+
+
+
+# The Command Client
+
+The Command Client allows you to send instructions to a running Logscape Cloud Collector. Use the command client to stop/start Cloud Apps, see running processes, update your configuration and install new applications. There are four main modules
+
+ 1. config 
+ 2. bundle 
+ 3. process 
+ 
+
+## CONFIG
+
+	./command config help 
+
+ * write -  takes a list of key value pairs and writes them to your services.json. The values that can be written are *manager*,*token*,*tag* and the app list *apps* 
+
+## BUNDLE
+
+	./command bundle help
+
+ * list  -  Lists all install applications on the system
+ * install *appname*  - Installs an app from an online repository 
+
+
+## PROCESS 
+	./command process help
+
+ * list -  Lists all running apps
+ * start *appname* - Start an app
+ * stop *appname* - stops an app 
