@@ -1,4 +1,4 @@
-# Logscape Collector Collector
+# Logscape Cloud Collector
 
 ## Intro 
 
@@ -9,8 +9,15 @@ The Logscape Cloud services accepts data from different sources. Any client that
 ## Downloads
 
  * [Windows Collector](installers/windows/setup.exe) 
+ * [Platform Independent](installers/windows/setup.exe) 
 
-## Sign Up
+
+
+## Setup
+
+Download and run setup.exe and unpack the Collector. When the setup.exe is finished it will install the Logscape Cloud Collector as a service. Open up task ma
+
+###1. Sign Up
 
 The first step is to sign up for a new account. 
 
@@ -18,13 +25,17 @@ The first step is to sign up for a new account.
 
 You will be asked to verify your email. Once you have logged to your user account area, take note of the security token. This token is used to send data into Logscape Cloud.
 
-## Installation
+###2. Install 
+***Windows***
 
-Download and run setup.exe and unpack the Collector. When the setup.exe is finished it will install the Logscape Cloud Collector as a service. Open up task ma
+Download the setup.exe and run on the hosts you want to monitor. The setup process will install the Collector as a Windows Service but will not attempt to run it
+
+***Platform Independent***
+
+Unpack the platform independent zip file and execute ./start.sh ( or start.bat) to run in standalone mode. 
 
 
-
-## Configure 
+###3. Configure 
 
 Edit the service.json file and update the json with you security token.  
 
@@ -39,7 +50,7 @@ Edit the service.json file and update the json with you security token.
 
 **apps** - The apps is a list of apps to run when the service runner is started. See [apps.logscape.com](http://apps.logscape.com) for availabe integrations.  
 
-## Collector 
+##4. Start
 
 To start the Logscape Collector  in standalone mode execute ./start.sh or ./start.bat depending on your Operating System. When you execute this process it will read in your services.json and execute the apps listed in the *apps* field using the security token specified by *token*. 
 
@@ -49,7 +60,7 @@ To start the Logscape Collector  in standalone mode execute ./start.sh or ./star
 
 There are two ways of updating your configuration. Using the first method, edit your services.json, then restart the agent. The second method uses the command client to send instructions to the Logscape Collector. Here are a few example commands 
 
-*** Display Current Config **
+** Display Current Config **
 
 	./command config 
 
