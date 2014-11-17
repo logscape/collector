@@ -39,11 +39,11 @@ Edit the service.json file and update the json with you security token.
 	
 **token** - The security token provided on Sign Up.
 
-**apps** - The apps is a list of apps to run when the service runner is started.
+**apps** - The apps is a list of apps to run when the service runner is started. See [apps.logscape.com](http://apps.logscape.com) for availabe integrations.  
+
 ## Collector 
 
-
-To execute the Service Runner in standalone mode execute ./start.sh or ./start.bat depending on your Operating System. 
+To start the Logscape Collector  in standalone mode execute ./start.sh or ./start.bat depending on your Operating System. When you execute this process it will read in your services.json and execute the apps listed in the *apps* field using the security token specified by *token*. 
 
 
 
