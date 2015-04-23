@@ -10,7 +10,7 @@ There are other ways of getting data into Logscape Cloud. The first is via [sysl
 
 ## Downloads
 
- * [Windows Collector](dist/LogscapeCloudAgent.zip) 
+ * [Windows Collector](dist/LogscapeCloudAgent.zip?raw=true) 
  * [Platform Independent](installers/windows/setup.exe) 
 
 
